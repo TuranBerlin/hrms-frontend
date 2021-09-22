@@ -1,8 +1,8 @@
 import axios from "axios";
 
-let base = "http://127.0.0.1:8080/api";
+let base = "http://192.168.1.111:8080/api";
 export default class CityService{
     getCities() {
-        return axios.get(`${base} /cities/get/all`)
+        return axios.get(base + "/cities/get/all")
     }
 }

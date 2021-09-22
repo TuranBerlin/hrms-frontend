@@ -124,7 +124,7 @@ export default function EmployerList() {
                             <TableCell style={{ width: 80 }} align="right">Company Name</TableCell>
                             <TableCell style={{ width: 80 }} align="right">E-mail</TableCell>
                             <TableCell style={{ width: 80 }} align="right">Web Address</TableCell>
-                            <TableCell style={{ width: 80 }} align="right">PhoneNumber</TableCell>
+                            <TableCell style={{ width: 80 }} align="right">Phone Number</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>

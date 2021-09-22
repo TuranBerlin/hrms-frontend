@@ -1,16 +1,25 @@
 import axios from "axios";
 
-let base = "http://127.0.0.1:8080/api";
+let base = "http://192.168.1.111:8080/api/jobAdverts";
 export default class JobAdvertService{
-    getJobAdverts() {
-        return axios.get(`${base} /jobAdverts/get/all`)
-    }
 
     getJobAdvertsWithDetails() {
-        return axios.get(base + "/jobAdverts/get/jobAdvertWithDetails")
+        return axios.get(base + "/get/jobAdvertWithDetails")
+    }
+
+    getJobAdvertsWithDetailsOnlyUnverified() {
+        return axios.get(base + "/get/jobAdvertWithDetails/onlyUnverifieds")
     }
 
     getJobAdvertsWithDetailsPageable(pageNumber, pageSize) {
-        return axios.get(base + "/jobAdverts/get/jobAdvertWithDetails/pageable?pageNumber=" + pageNumber + "&pageSize="  + pageSize)
+        return axios.get(base + "/get/jobAdvertWithDetails/pageable?pageNumber=" + pageNumber + "&pageSize="  + pageSize)
+    }
+
+    verifyAdvert(advertId) {
+        return axios.post(base + "/changeStatus/jobAdvert?advertId="+ advertId + "&status=true")
+    }
+
+    deleteAdvert(advertId) {
+        return axios.post(base + "/delete/jobAdvert?advertId=" + advertId)
     }
 }

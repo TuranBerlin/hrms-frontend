@@ -4,10 +4,11 @@ import Navi from './layouts/Navi';
 import Container from '@material-ui/core/Container';
 
 function App() {
+
   return (
     <div className="App">
       <Navi/>
-      <Container fixed>
+      <Container>
         <Dashboard/>
       </Container>
     </div>
